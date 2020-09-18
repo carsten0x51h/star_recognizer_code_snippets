@@ -43,10 +43,10 @@ The previous parts show the different steps which are required to finally create
 
 In order build the binaries the following libraries are required
 
-CImg-devel.x86_64
-CCfits-devel.x86_64
-cfitsio-devel.x86_64
-gsl-devel.x86_64
+ * CImg-devel.x86_64
+ * CCfits-devel.x86_64
+ * cfitsio-devel.x86_64
+ * gsl-devel.x86_64
 
 
 ## Build
@@ -61,23 +61,23 @@ to build only a particular part simply run
 
 ## Program execution
 
-Part 1: ```./part1_anisotropic_diffusion test_data/part1_part2_anisotropic_diffusion.fits```
-Part 2: ```./part2_otsu_thresholding test_data/part1_part2_anisotropic_diffusion.fits```
-Part 3: ```./part3_star_clustering test_data/part3_bin_img.fits```
-Part 4: ```./part4_star_centroid test_data/part4_star.fits```
-Part 5: ```./part5_fwhm_levenmberg_marquart_curve_fitting```
-Part 6: ```./part6_hfd test_data/part6_focus_star1.fits```
-Part 7: ```./part7_star_recognizer test_data/part7_star_recognizer.fits```
+ * Part 1: ```./part1_anisotropic_diffusion test_data/part1_part2_anisotropic_diffusion.fits```
+ * Part 2: ```./part2_otsu_thresholding test_data/part1_part2_anisotropic_diffusion.fits```
+ * Part 3: ```./part3_star_clustering test_data/part3_bin_img.fits```
+ * Part 4: ```./part4_star_centroid test_data/part4_star.fits```
+ * Part 5: ```./part5_fwhm_levenmberg_marquart_curve_fitting```
+ * Part 6: ```./part6_hfd test_data/part6_focus_star1.fits```
+ * Part 7: ```./part7_star_recognizer test_data/part7_star_recognizer.fits```
 
 
 ## Further documentation
 
 The specific parts are documented inthe following blog posts:
 
-Part 1: http://www.lost-infinity.com/night-sky-image-processing-part-1-noise-reduction-using-anisotropic-diffusion-with-c-using-the-cimg-library/
-Part 2: http://www.lost-infinity.com/night-sky-image-processing-part-2-image-binarization-using-otsus-thresholding-algorithm-a-simple-c-implementation-using-the-cimg-library/
-Part 3: http://www.lost-infinity.com/night-sky-image-processing-part-3-star-clustering-a-simple-c-implementation/
-Part 4: http://www.lost-infinity.com/night-sky-image-processing-part-4-calculate-the-star-centroid-with-sub-pixel-accuracy/
-Part 5: http://www.lost-infinity.com/night-sky-image-processing-part-5-measuring-fwhm-of-a-star-using-curve-fitting-a-simple-c-implementation/
-Part 6: http://www.lost-infinity.com/night-sky-image-processing-part-6-measuring-the-half-flux-diameter-hfd-of-a-star-a-simple-c-implementation/
-Part 7: https://www.lost-infinity.com/night-sky-image-processing-part-7-automatic-star-recognizer/
+ * Part 1: http://www.lost-infinity.com/night-sky-image-processing-part-1-noise-reduction-using-anisotropic-diffusion-with-c-using-the-cimg-library/
+ * Part 2: http://www.lost-infinity.com/night-sky-image-processing-part-2-image-binarization-using-otsus-thresholding-algorithm-a-simple-c-implementation-using-the-cimg-library/
+ * Part 3: http://www.lost-infinity.com/night-sky-image-processing-part-3-star-clustering-a-simple-c-implementation/
+ * Part 4: http://www.lost-infinity.com/night-sky-image-processing-part-4-calculate-the-star-centroid-with-sub-pixel-accuracy/
+ * Part 5: http://www.lost-infinity.com/night-sky-image-processing-part-5-measuring-fwhm-of-a-star-using-curve-fitting-a-simple-c-implementation/
+ * Part 6: http://www.lost-infinity.com/night-sky-image-processing-part-6-measuring-the-half-flux-diameter-hfd-of-a-star-a-simple-c-implementation/
+ * Part 7: https://www.lost-infinity.com/night-sky-image-processing-part-7-automatic-star-recognizer/
