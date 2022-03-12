@@ -72,7 +72,7 @@ void cluster_stars(const CImg<T> & inImg, vector<PixelPosListT> * outRecognizedC
   }
  
   // Iterate over white pixels as long as set is not empty
-  while (whitePixels.size()) {
+  while (!whitePixels.empty()) {
     PixelPosListT pixelCluster;
     PixelPosListT pixelsToBeProcessed;
 
