@@ -37,9 +37,9 @@ getAndRemoveNeighbours(PixelPosT inCurPixelPos, PixelPosSetT * inoutWhitePixels,
                        PixelPosListT * inoutPixelsToBeProcessed,
                        PixelPosListT * outPixelCluster)
 {
-  const size_t _numPixels = 8, _x = 0, _y = 1;
+  const size_t _numPixels = 9, _x = 0, _y = 1;
   const int offsets[_numPixels][2] = { { -1, -1 }, { 0, -1 }, { 1, -1 },
-                                       { -1, 0 },              { 1, 0 },
+                                       { -1, 0 }, { 0, 0 }, { 1, 0 },
                                        { -1, 1 }, { 0, 1 }, { 1, 1 } };
   
   for (size_t p = 0; p < _numPixels; ++p) {
@@ -75,19 +75,20 @@ void cluster_stars(const CImg<T> & inImg, vector<PixelPosListT> * outRecognizedC
   while (whitePixels.size()) {
     PixelPosListT pixelCluster;
     PixelPosListT pixelsToBeProcessed;
- 
-    PixelPosSetT::iterator itWhitePixPos = whitePixels.begin();
+
+    auto itWhitePixPos = whitePixels.begin();
     pixelsToBeProcessed.push_back(*itWhitePixPos);
-    whitePixels.erase(itWhitePixPos);
- 
-    while(! pixelsToBeProcessed.empty()) {
+
+    while (!pixelsToBeProcessed.empty()) {
       PixelPosT curPixelPos = pixelsToBeProcessed.front();
       getAndRemoveNeighbours(curPixelPos, & whitePixels, & pixelsToBeProcessed, & pixelCluster);
       pixelsToBeProcessed.pop_front();
     }
  
-    // Finally, append the cluster
-    outRecognizedClusters->push_back(pixelCluster);
+    // Finally, append the cluster (if not empty)
+    if (! pixelCluster.empty()) {
+      outRecognizedClusters->push_back(pixelCluster);
+    }
   }
 }
  
